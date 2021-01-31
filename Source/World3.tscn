@@ -1,0 +1,166 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://newtile.tres" type="TileSet" id=1]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Rabbit.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Popupw31.gd" type="Script" id=4]
+[ext_resource path="res://Popupw32.gd" type="Script" id=5]
+[ext_resource path="res://orman1.jpg" type="Texture" id=6]
+[ext_resource path="res://obstacles.tres" type="TileSet" id=7]
+[ext_resource path="res://Bocuk1.gd" type="Script" id=8]
+[ext_resource path="res://World3.gd" type="Script" id=9]
+[ext_resource path="res://mixkit-player-losing-or-failing-2042 BAŞARISIZLIK.wav" type="AudioStream" id=10]
+[ext_resource path="res://cop.tscn" type="PackedScene" id=11]
+[ext_resource path="res://cop2.tscn" type="PackedScene" id=12]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 36.3535
+height = 0.0
+
+[node name="World3" type="Node2D"]
+script = ExtResource( 9 )
+
+[node name="TileMap" type="TileMap" parent="."]
+scale = Vector2( 0.07, 0.07 )
+tile_set = ExtResource( 1 )
+format = 1
+tile_data = PoolIntArray( 2228224, 0, 0, 4391010, 1, 0, 5505076, 1, 0, 7077886, 1, 0, 8650789, 1, 0, 8716366, 3, 0, 8912988, 0, 0, 8913057, 0, 0, 9502812, 5, 0, 9502881, 5, 0, 9830676, 3, 0, 9896028, 5, 0, 9896097, 5, 0, 10289244, 5, 0, 10289313, 5, 0, 10682460, 5, 0, 10682529, 5, 0, 11010290, 3, 0, 11075676, 5, 0, 11075745, 5, 0, 11468892, 5, 0, 11468961, 5, 0, 11666178, 0, 0, 11862108, 5, 0, 11862177, 5, 0, 11862762, 2, 0, 11993822, 2, 0, 12124882, 2, 0, 12255942, 2, 0, 12256002, 5, 0, 12387002, 2, 0, 12517638, 3, 0, 12518062, 2, 0, 12649122, 2, 0, 12649218, 5, 0, 12780182, 2, 0, 12911242, 2, 0, 13041960, 1, 0, 13042302, 2, 0, 13042434, 5, 0, 13173362, 2, 0, 13304422, 2, 0, 13435650, 5, 0, 13762969, 0, 0, 13763038, 0, 0, 13763107, 0, 0, 13828438, 1, 0, 13828866, 5, 0, 14222082, 5, 0, 14352793, 5, 0, 14352862, 5, 0, 14352931, 5, 0, 14615298, 5, 0, 14746009, 5, 0, 14746078, 5, 0, 14746147, 5, 0, 15008514, 5, 0, 15139225, 5, 0, 15139294, 5, 0, 15139363, 5, 0, 15401730, 5, 0, 15532441, 5, 0, 15532510, 5, 0, 15532579, 5, 0, 15794946, 5, 0, 15925657, 5, 0, 15925726, 5, 0, 15925795, 5, 0, 16188162, 5, 0, 16318873, 5, 0, 16318942, 5, 0, 16319011, 5, 0, 16581378, 5, 0, 16712089, 5, 0, 16712158, 5, 0, 16712227, 5, 0, 16974594, 5, 0, 17105305, 5, 0, 17105374, 5, 0, 17105443, 5, 0, 17498521, 5, 0, 17498590, 5, 0, 17498659, 5, 0, 17891737, 5, 0, 17891806, 5, 0, 17891875, 5, 0 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 25.1013, 103.78 )
+
+[node name="Rabbit" parent="." instance=ExtResource( 3 )]
+position = Vector2( 186.036, 133.204 )
+
+[node name="ToolButtonw31" type="ToolButton" parent="."]
+margin_left = 161.0
+margin_top = 122.0
+margin_right = 176.0
+margin_bottom = 152.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Popupw31" type="Popup" parent="."]
+visible = true
+margin_left = 54.3726
+margin_top = 21.9896
+margin_right = 176.373
+margin_bottom = 84.9896
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Popupw31"]
+margin_left = 11.0
+margin_top = 10.0
+margin_right = 132.0
+margin_bottom = 75.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ToolButtonw32" type="ToolButton" parent="."]
+margin_left = 3713.0
+margin_top = 761.0
+margin_right = 3736.0
+margin_bottom = 796.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Popupw32" type="Popup" parent="."]
+visible = true
+margin_left = 3548.01
+margin_top = 593.659
+margin_right = 3686.01
+margin_bottom = 679.659
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Popupw32"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Rabbit2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 3744.06, 776.431 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground"]
+position = Vector2( 644.196, 362.099 )
+scale = Vector2( 0.257213, 0.202374 )
+texture = ExtResource( 6 )
+
+[node name="TileMap2" type="TileMap" parent="."]
+scale = Vector2( 0.05, 0.05 )
+tile_set = ExtResource( 7 )
+format = 1
+tile_data = PoolIntArray( -9633959, 0, 0, 5308576, 0, 0, 11534542, 3, 0, 11600002, 0, 0, 18285171, 3, 0, 18350857, 3, 0, 18481849, 0, 0 )
+
+[node name="Bocuk1" type="Area2D" parent="."]
+position = Vector2( 546.532, 291.087 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bocuk1"]
+shape = SubResource( 1 )
+
+[node name="fail" type="AudioStreamPlayer" parent="Bocuk1"]
+stream = ExtResource( 10 )
+
+[node name="Bocuk2" type="Area2D" parent="."]
+position = Vector2( 453.824, 597.771 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bocuk2"]
+shape = SubResource( 1 )
+
+[node name="fail" type="AudioStreamPlayer" parent="Bocuk2"]
+stream = ExtResource( 10 )
+
+[node name="Bocuk3" type="Area2D" parent="."]
+position = Vector2( 2265.74, 929.558 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bocuk3"]
+shape = SubResource( 1 )
+
+[node name="fail" type="AudioStreamPlayer" parent="Bocuk3"]
+stream = ExtResource( 10 )
+
+[node name="cop" parent="." instance=ExtResource( 11 )]
+position = Vector2( 185.816, 302.191 )
+
+[node name="cop2" parent="." instance=ExtResource( 12 )]
+position = Vector2( -99.2715, 355.645 )
+
+[node name="cop3" parent="." instance=ExtResource( 11 )]
+position = Vector2( 762, 535 )
+
+[node name="cop4" parent="." instance=ExtResource( 12 )]
+position = Vector2( 960, 622 )
+
+[node name="cop5" parent="." instance=ExtResource( 11 )]
+position = Vector2( 1498, 873 )
+
+[node name="cop6" parent="." instance=ExtResource( 11 )]
+position = Vector2( 1844, 869 )
+
+[node name="cop7" parent="." instance=ExtResource( 12 )]
+position = Vector2( 2858, 747 )
+[connection signal="pressed" from="ToolButtonw31" to="Popupw31" method="_on_ToolButtonw31_pressed"]
+[connection signal="pressed" from="ToolButtonw32" to="Popupw32" method="_on_ToolButtonw32_pressed"]

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/189640__yuval__grass-loop-short-ÇİMDE-YÜRÜME.wav-98aeae767a00706ca48f1888ce401ad1.sample"
+
+[deps]
+
+source_file="res://189640__yuval__grass-loop-short-ÇİMDE-YÜRÜME.wav"
+dest_files=[ "res://.import/189640__yuval__grass-loop-short-ÇİMDE-YÜRÜME.wav-98aeae767a00706ca48f1888ce401ad1.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://DialogBox.gd" type="Script" id=1]
+[ext_resource path="res://Tiles/Screen_Shot_2021-01-31_at_13.19.36.png" type="Texture" id=2]
+
+[node name="Opening Screen" type="Node2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 633.954, 359.835 )
+scale = Vector2( 0.793147, 0.641551 )
+
+[node name="Screen_Shot_2021-01-31_at_131936" type="Sprite" parent="Sprite"]
+position = Vector2( 10.4515, 7.34619 )
+texture = ExtResource( 2 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 356.0
+margin_top = 218.0
+margin_right = 927.0
+margin_bottom = 375.0
+bbcode_enabled = true
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.05
+autostart = true
+[connection signal="timeout" from="Timer" to="RichTextLabel" method="_on_Timer_timeout"]

@@ -1,0 +1,107 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://newtile.tres" type="TileSet" id=1]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Rabbit.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Rabbit1.gd" type="Script" id=4]
+[ext_resource path="res://PopupDialog.gd" type="Script" id=5]
+[ext_resource path="res://Popup2.gd" type="Script" id=6]
+[ext_resource path="res://orman2.jpg" type="Texture" id=7]
+[ext_resource path="res://World.gd" type="Script" id=8]
+
+[node name="World" type="Node2D"]
+script = ExtResource( 8 )
+
+[node name="World1_1" type="Popup" parent="."]
+visible = true
+margin_left = 83.0
+margin_top = 151.0
+margin_right = 273.0
+margin_bottom = 212.0
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="World1_1"]
+anchor_top = 0.868
+anchor_bottom = 0.868
+margin_left = 8.0
+margin_top = -42.984
+margin_right = 188.0
+margin_bottom = 26.016
+bbcode_enabled = true
+tab_size = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TileMap" type="TileMap" parent="."]
+scale = Vector2( 0.07, 0.07 )
+tile_set = ExtResource( 1 )
+format = 1
+tile_data = PoolIntArray( -1309928, 4, 0, -1309921, 0, 0, -1309764, 0, 0, -1309695, 0, 0, -1244573, 0, 0, -1244504, 0, 0, -1244436, 4, 0, -1244291, 4, 0, -1244263, 4, 0, -720327, 1, 0, -720097, 5, 0, -719940, 5, 0, -719871, 5, 0, -654749, 5, 0, -654680, 5, 0, -326881, 5, 0, -326724, 5, 0, -326655, 5, 0, -261533, 5, 0, -261464, 5, 0, -196082, 1, 0, 474, 1, 0, 66335, 5, 0, 66492, 5, 0, 66561, 5, 0, 131683, 5, 0, 131752, 5, 0, 197400, 3, 0, 262893, 3, 0, 459551, 5, 0, 459708, 5, 0, 459777, 5, 0, 524899, 5, 0, 524968, 5, 0, 590616, 3, 0, 656109, 3, 0, 852767, 5, 0, 852924, 5, 0, 852993, 5, 0, 918115, 5, 0, 918184, 5, 0, 983832, 3, 0, 1049325, 3, 0, 1245983, 5, 0, 1246140, 5, 0, 1246209, 5, 0, 1311331, 5, 0, 1311400, 5, 0, 1639356, 5, 0, 1639425, 5, 0, 1704367, 1, 0, 2556060, 1, 0, 2621541, 2, 0, 2621566, 2, 0, 3146217, 1, 0, 3211327, 1, 0, 4128977, 0, 0, 4129046, 0, 0, 4129115, 0, 0, 4129184, 0, 0, 4653056, 0, 0, 4653125, 0, 0, 4718801, 5, 0, 4718870, 5, 0, 4718939, 5, 0, 4719008, 5, 0, 5112017, 5, 0, 5112086, 5, 0, 5112155, 5, 0, 5112224, 5, 0, 5242880, 5, 0, 5242949, 5, 0, 5505233, 5, 0, 5505302, 5, 0, 5505371, 5, 0, 5505440, 5, 0, 5636096, 5, 0, 5636165, 5, 0, 5898449, 5, 0, 5898518, 5, 0, 5898587, 5, 0, 5898656, 5, 0, 6029312, 5, 0, 6029381, 5, 0, 6291665, 5, 0, 6291734, 5, 0, 6291803, 5, 0, 6291872, 5, 0, 6422528, 5, 0, 6422597, 5, 0, 6815744, 5, 0, 6815813, 5, 0 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 35.1934, 266.365 )
+
+[node name="Rabbit1" parent="." instance=ExtResource( 3 )]
+position = Vector2( 211.557, 297.49 )
+script = ExtResource( 4 )
+
+[node name="Rabbit2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 4874.08, -108.438 )
+
+[node name="ToolButton1" type="ToolButton" parent="."]
+margin_left = 186.0
+margin_top = 284.0
+margin_right = 202.0
+margin_bottom = 314.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ToolButton2" type="ToolButton" parent="."]
+margin_left = 4841.65
+margin_top = -153.447
+margin_right = 4882.65
+margin_bottom = -74.4466
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Popup" type="Popup" parent="."]
+visible = true
+margin_left = 4602.42
+margin_top = -281.847
+margin_right = 4872.42
+margin_bottom = -169.847
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Popup"]
+anchor_left = 2.972
+anchor_top = -0.356
+anchor_right = 2.972
+anchor_bottom = -0.356
+margin_left = -667.7
+margin_top = 28.124
+margin_right = -439.7
+margin_bottom = 98.124
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground"]
+position = Vector2( 636.168, 365.974 )
+scale = Vector2( 0.256257, 0.206518 )
+texture = ExtResource( 7 )
+[connection signal="popup_hide" from="World1_1" to="World1_1" method="_on_PopupDialog_popup_hide"]
+[connection signal="pressed" from="ToolButton1" to="World1_1" method="_on_ToolButton_pressed"]
+[connection signal="pressed" from="ToolButton2" to="Popup" method="_on_ToolButton2_pressed"]

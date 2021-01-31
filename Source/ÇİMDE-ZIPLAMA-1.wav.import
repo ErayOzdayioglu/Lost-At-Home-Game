@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/ÇİMDE-ZIPLAMA-1.wav-c30ef04108a16551af04fd1fa8bdce6c.sample"
+
+[deps]
+
+source_file="res://ÇİMDE-ZIPLAMA-1.wav"
+dest_files=[ "res://.import/ÇİMDE-ZIPLAMA-1.wav-c30ef04108a16551af04fd1fa8bdce6c.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

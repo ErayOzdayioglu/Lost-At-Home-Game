@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://cop2.png" type="Texture" id=1]
+[ext_resource path="res://cop.gd" type="Script" id=2]
+
+[node name="cop" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="ToolButton" type="ToolButton" parent="."]
+margin_left = 59.0
+margin_top = 39.0
+margin_right = 100.0
+margin_bottom = 84.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 76.0328, 60.6923 )
+scale = Vector2( 0.0391778, 0.0418715 )
+texture = ExtResource( 1 )
+[connection signal="pressed" from="ToolButton" to="." method="_on_ToolButton_pressed"]

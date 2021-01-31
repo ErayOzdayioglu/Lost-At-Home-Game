@@ -1,0 +1,81 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Tiles/tgvx1-1sbu2.png" type="Texture" id=1]
+[ext_resource path="res://cop2.gd" type="Script" id=2]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 391.424
+height = 564.534
+
+[sub_resource type="CapsuleShape2D" id=4]
+radius = 689.472
+
+[node name="Obstacles" type="Node2D"]
+
+[node name="Bocuk" type="Sprite" parent="."]
+position = Vector2( 125.196, 121.996 )
+scale = Vector2( 0.0750129, 0.081417 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 206.183, 248.251, 1330.26, 994.991 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Bocuk"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bocuk/StaticBody2D"]
+position = Vector2( 22.375, -15.2349 )
+rotation = 1.5708
+shape = SubResource( 1 )
+
+[node name="cop1" type="Sprite" parent="."]
+position = Vector2( 367.772, 129.547 )
+scale = Vector2( 0.0750129, 0.081417 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 85.3608, 1592.82, 943.529, 777.053 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="cop1"]
+
+[node name="cop2" type="Sprite" parent="."]
+position = Vector2( 474.112, 131.211 )
+scale = Vector2( 0.0750129, 0.081417 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 138.088, 2652.07, 1208.95, 1000.04 )
+script = ExtResource( 2 )
+
+[node name="ToolButton" type="ToolButton" parent="cop2"]
+margin_left = -519.0
+margin_top = -451.0
+margin_right = 741.0
+margin_bottom = 546.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="cop2"]
+position = Vector2( 137.215, -15.8799 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Kutuk" type="Sprite" parent="."]
+position = Vector2( 250.198, 125.541 )
+scale = Vector2( 0.0750129, 0.081417 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 353.493, 4016.34, 1585.82, 1230.31 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Kutuk"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Kutuk/StaticBody2D"]
+shape = SubResource( 4 )
+[connection signal="pressed" from="cop2/ToolButton" to="cop2" method="_on_ToolButton_pressed"]

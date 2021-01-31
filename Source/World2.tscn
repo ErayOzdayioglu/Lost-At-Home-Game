@@ -1,0 +1,116 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://newtile.tres" type="TileSet" id=1]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Rabbit.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Popup3.gd" type="Script" id=4]
+[ext_resource path="res://Popup4.gd" type="Script" id=5]
+[ext_resource path="res://orman2.jpg" type="Texture" id=6]
+[ext_resource path="res://obstacles.tres" type="TileSet" id=7]
+[ext_resource path="res://World2.gd" type="Script" id=8]
+[ext_resource path="res://cop.tscn" type="PackedScene" id=9]
+[ext_resource path="res://cop2.tscn" type="PackedScene" id=10]
+
+[node name="World2" type="Node2D"]
+script = ExtResource( 8 )
+
+[node name="TileMap" type="TileMap" parent="."]
+scale = Vector2( 0.07, 0.07 )
+tile_set = ExtResource( 1 )
+format = 1
+tile_data = PoolIntArray( 2884316, 1, 0, 2884444, 1, 0, 3408700, 3, 0, 3408707, 3, 0, 3539426, 0, 0, 3539650, 2, 0, 4063918, 2, 0, 4129250, 5, 0, 4129568, 3, 0, 4129575, 3, 0, 4391107, 1, 0, 4522466, 5, 0, 4653721, 2, 0, 4653830, 4, 0, 4719067, 3, 0, 4915682, 5, 0, 5243602, 1, 0, 5308898, 5, 0, 5374537, 0, 0, 5701737, 1, 0, 5702114, 5, 0, 5964233, 3, 0, 5964361, 5, 0, 6029677, 0, 0, 6095330, 5, 0, 6357158, 0, 0, 6357322, 2, 0, 6357577, 5, 0, 6422576, 1, 0, 6422795, 4, 0, 6422828, 4, 0, 6488546, 5, 0, 6619501, 5, 0, 6750793, 5, 0, 6881762, 5, 0, 6946982, 5, 0, 7012717, 5, 0, 7144009, 5, 0, 7274978, 5, 0, 7340198, 5, 0, 7405933, 5, 0, 7537225, 5, 0, 7668194, 5, 0, 7733414, 5, 0, 7799149, 5, 0, 7864321, 0, 0, 7864390, 0, 0, 7930441, 5, 0, 8061410, 5, 0, 8126630, 5, 0, 8192365, 5, 0, 8323657, 5, 0, 8454145, 5, 0, 8454214, 5, 0, 8454626, 5, 0, 8519846, 5, 0, 8585581, 5, 0, 8716873, 5, 0, 8847361, 5, 0, 8847430, 5, 0, 8847842, 5, 0, 8913062, 5, 0, 8978797, 5, 0, 9110089, 5, 0, 9240577, 5, 0, 9240646, 5, 0, 9241058, 5, 0, 9306278, 5, 0, 9372013, 5, 0, 9633793, 5, 0, 9633862, 5, 0, 9634274, 5, 0, 9699494, 5, 0, 9765229, 5, 0, 10027009, 5, 0, 10027078, 5, 0, 10027490, 5, 0, 10092710, 5, 0, 10158445, 5, 0, 10420706, 5, 0 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 53.3782, 499.807 )
+
+[node name="Rabbit" parent="." instance=ExtResource( 3 )]
+position = Vector2( 193.71, 516.305 )
+
+[node name="ToolButtonw2" type="ToolButton" parent="."]
+margin_left = 168.0
+margin_top = 499.0
+margin_right = 185.0
+margin_bottom = 535.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Popup" type="Popup" parent="."]
+visible = true
+margin_left = 56.5
+margin_top = 339.5
+margin_right = 295.5
+margin_bottom = 406.5
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Popup"]
+margin_right = 227.0
+margin_bottom = 73.0
+
+[node name="ToolButtonw21" type="ToolButton" parent="."]
+margin_left = 3970.0
+margin_top = 170.0
+margin_right = 3987.0
+margin_bottom = 197.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Popup2" type="Popup" parent="."]
+visible = true
+margin_left = 3875.0
+margin_top = 30.0
+margin_right = 4025.0
+margin_bottom = 102.0
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Popup2"]
+margin_right = 127.0
+margin_bottom = 58.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Rabbit2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 3998.21, 178.426 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground"]
+position = Vector2( 638.221, 361.772 )
+scale = Vector2( 0.257197, 0.202344 )
+texture = ExtResource( 6 )
+
+[node name="TileMap2" type="TileMap" parent="."]
+scale = Vector2( 0.05, 0.05 )
+tile_set = ExtResource( 7 )
+format = 1
+tile_data = PoolIntArray( 6620007, 3, 0, 7537165, 3, 0, 10027132, 3, 0 )
+
+[node name="cop" parent="." instance=ExtResource( 9 )]
+position = Vector2( 447.71, 315.183 )
+
+[node name="cop2" parent="." instance=ExtResource( 10 )]
+position = Vector2( 691.57, 305.933 )
+
+[node name="cop3" parent="." instance=ExtResource( 9 )]
+position = Vector2( 1777.17, 334.524 )
+
+[node name="cop4" parent="." instance=ExtResource( 10 )]
+position = Vector2( 2222.84, 113.368 )
+
+[node name="cop5" parent="." instance=ExtResource( 10 )]
+position = Vector2( 2575.55, 245.44 )
+
+[node name="cop6" parent="." instance=ExtResource( 9 )]
+position = Vector2( 3188.28, 281.95 )
+[connection signal="pressed" from="ToolButtonw2" to="Popup" method="_on_ToolButtonw2_pressed"]
+[connection signal="pressed" from="ToolButtonw21" to="Popup2" method="_on_ToolButtonw21_pressed"]
